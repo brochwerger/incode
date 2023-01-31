@@ -1,0 +1,38 @@
+@startuml
+
+package wp3 {
+    rectangle t3.1
+    rectangle t3.2
+    rectangle t3.3
+}
+
+package wp2 {
+    rectangle t2.2
+    rectangle t2.3
+}
+
+package wp4
+package wp5
+
+' file d31 [
+'     "D3.1 (M18)"
+' ]
+
+' file d32 [
+'     "D3.2 (M20)"
+' ]
+
+wp3 ~~>  wp2 
+wp3 ~~> wp4 
+wp3 ~~> wp5 
+
+' wp3 =left=> d31 : [delivers]
+' wp3 =left=> d32 : [delivers]
+
+t3.1 <-> t3.2
+t3.1 <-> t3.3
+t3.2 <-> t3.3
+
+@enduml
+
+
